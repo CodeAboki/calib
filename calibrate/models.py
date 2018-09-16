@@ -19,14 +19,48 @@ class Calibration(models.Model):
         ('ABIA', 'ABIA'),
         ('ADAMAWA', 'ADAMAWA'),
         ('AKWA IBOM', 'AKWA IBOM'),
-        ('KANO', 'KANO')
+        ('ANAMBARA', 'ANAMBARA'),
+        ('BAUCHI','BAUCHI'),
+        ('BAYELSA','BAYELSA'),
+        ('BENUE','BENUE'),
+        ('BORNO', 'BORNO'),
+        ('CROSS RIVER','CROSS RIVER'),
+        ('DELTA','DELTA'),
+        ('EBONYI', 'EBONYI'),
+        ('EDO', 'EDO'),
+        ('EKITI','EKITI'),
+        ('ENUGU','ENUGU'),
+        ('GOMBE','GOMBE'),
+        ('IMO','IMO'),
+        ('JIGAWA','JIGAWA'),
+        ('KADUNA','KADUNA'),
+        ('KANO','KANO'),
+        ('KATSINA','KATSINA'),
+        ('KOGI','KOGI'),
+        ('KWARA','KWARA'),
+        ('LAGOS','LAGOS'),
+        ('NASSARAWA','NASSARAWA'),
+        ('NIGER','NIGER'),
+        ('OGUN','OGUN'),
+        ('ONDO','ONDO'),
+        ('OSUN','OSUN'),
+        ('OYO','OYO'),
+        ('PLATEAU','PLATEAU'),
+        ('RIVERS','RIVERS'),
+        ('SOKOTO','SOKOTO'),
+        ('TARABA','TARABA'),
+        ('UYO','UYO'),
+        ('YOBE','YOBE'),
+        ('ZAMFARA','ZAMFARA'),
+        ('ABUJA','ABUJA')
+
     )
     state = models.CharField(max_length = 20, choices = STATE_CHOICE)
 
-    phone = models.IntegerField(blank=True, null=True)
+    phone = models.BigIntegerField(blank=True, null=True)
     email = models.EmailField(max_length=200)
     tyre_make = models.CharField(max_length=200)
-    tyre_guage = models.IntegerField(blank=True, null=True)
+    tyre_guage = models.BigIntegerField(blank=True, null=True)
 
     VALVE_POSITION_CHOICES = (
         ('OPEN', 'OPEN'),
@@ -35,7 +69,7 @@ class Calibration(models.Model):
     )
     valve_position = models.CharField(max_length =20, choices = VALVE_POSITION_CHOICES)
     
-    job_number = models.IntegerField(blank=True, null=True)
+    job_number = models.BigIntegerField(blank=True, null=True)
 
     TANK_POSITION_CHOICES = (
         ('BALLON', 'BALLON'),

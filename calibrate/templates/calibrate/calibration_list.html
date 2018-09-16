@@ -21,7 +21,7 @@
                             <th>Capacity</th>
                             <th>Status</th>
                             <th>View File</th>
-                            {% if user.is_adminStaff or user.is_superAdmin%}
+                            {% if user.is_adminStaff or user.is_superAdmin or user.is_superuser %}
                             <th>Edit</th>
                             <th>Delete</th>
                             {% endif %}
@@ -39,7 +39,7 @@
                             <td> {{ calibration.capacity}} </td>
                             <td> {{ calibration.status }} </td>
                             <td> <a href="media/{{calibration.document }}" target=blank>File</a></td>
-                            {% if user.is_adminStaff or user.is_superAdmin%}
+                            {% if user.is_adminStaff or user.is_superAdmin or user.is_superuser %}
                             <td> <a href="{% url 'calibrate:calibration_edit' calibration.id %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
                             <td><a href="{% url 'calibrate:calibration_delete' calibration.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
                             {% endif %} {% endfor %}

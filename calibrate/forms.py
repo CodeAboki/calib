@@ -204,7 +204,40 @@ class CalibrationForm(forms.ModelForm):
         ('ABIA', 'ABIA'),
         ('ADAMAWA', 'ADAMAWA'),
         ('AKWA IBOM', 'AKWA IBOM'),
-        ('KANO', 'KANO')
+        ('ANAMBARA', 'ANAMBARA'),
+        ('BAUCHI','BAUCHI'),
+        ('BAYELSA','BAYELSA'),
+        ('BENUE','BENUE'),
+        ('BORNO', 'BORNO'),
+        ('CROSS RIVER','CROSS RIVER'),
+        ('DELTA','DELTA'),
+        ('EBONYI', 'EBONYI'),
+        ('EDO', 'EDO'),
+        ('EKITI','EKITI'),
+        ('ENUGU','ENUGU'),
+        ('GOMBE','GOMBE'),
+        ('IMO','IMO'),
+        ('JIGAWA','JIGAWA'),
+        ('KADUNA','KADUNA'),
+        ('KANO','KANO'),
+        ('KATSINA','KATSINA'),
+        ('KOGI','KOGI'),
+        ('KWARA','KWARA'),
+        ('LAGOS','LAGOS'),
+        ('NASSARAWA','NASSARAWA'),
+        ('NIGER','NIGER'),
+        ('OGUN','OGUN'),
+        ('ONDO','ONDO'),
+        ('OSUN','OSUN'),
+        ('OYO','OYO'),
+        ('PLATEAU','PLATEAU'),
+        ('RIVERS','RIVERS'),
+        ('SOKOTO','SOKOTO'),
+        ('TARABA','TARABA'),
+        ('UYO','UYO'),
+        ('YOBE','YOBE'),
+        ('ZAMFARA','ZAMFARA'),
+        ('ABUJA','ABUJA')
     )
 
     state= forms.ChoiceField(choices=STATE_CHOICE, widget=forms.Select( 
@@ -213,7 +246,7 @@ class CalibrationForm(forms.ModelForm):
         }
     ))
 
-    phone = forms.IntegerField(widget=forms.NumberInput( 
+    phone = forms.IntegerField(widget=forms.TextInput( 
         attrs={
             'class':'form-control',
             'placeholder':'Phone Number'
@@ -234,7 +267,7 @@ class CalibrationForm(forms.ModelForm):
         }
     ))
 
-    tyre_guage = forms.IntegerField(widget = forms.NumberInput(
+    tyre_guage = forms.IntegerField(widget = forms.TextInput(
         attrs={
             'class':'form-control',
             'placeholder':'Tyre Guage'
@@ -255,7 +288,7 @@ class CalibrationForm(forms.ModelForm):
         }
     ))
 
-    job_number = forms.IntegerField(widget = forms.NumberInput(
+    job_number = forms.IntegerField(widget = forms.TextInput(
         attrs={
             'class':'form-control',
             'placeholder':'Job Number'

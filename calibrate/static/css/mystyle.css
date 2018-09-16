@@ -80,3 +80,8 @@ body {
     box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.19), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-top: 52px;
 }
+
+#home-links>.btn {
+    border-radius: 0px;
+    width: 150px;
+}
