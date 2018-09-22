@@ -3,18 +3,33 @@
     <div class="panel panel-default">
         <!-- Default panel contents -->
         <div class="panel-heading">
-            <h4><strong>Edit Staff Details</strong></h4>
+            <h4><strong>Add New Staff</strong></h4>
         </div>
         <div class="panel-body">
             <form method="POST">
                 {% csrf_token %}
-                <table>
-                    {{user_form.as_p}}
-                </table>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="last_name" name="last_name" placeholder="Last Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="username" name="username" placeholder="username">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="password" name="password" placeholder="Password">
+                        <button onClick="generatePassword()">Generate</button>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Add Staff">
+                </div>
                 <br>
-                <input type="submit" class="btn btn-primary" value="Update Staff">
             </form>
         </div>
     </div>
-</div>
-{% endblock %}
+    {% endblock %}
